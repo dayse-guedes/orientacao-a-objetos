@@ -1,10 +1,11 @@
 ﻿Musica musica1 = new Musica();
-musica1.Nome = "Divino Maravilhoso";
-musica1.Artista = "Gal Costa";
+musica1.Nome = "Dia Lindo";
+musica1.Artista = "Terno Rei";
 musica1.Duracao = 273;
 musica1.Disponivel = true;
 
-Console.WriteLine(musica1.Disponivel);
+
+Console.WriteLine(musica1.DescricaoResumida);
 
 
 Musica musica2 = new Musica();
