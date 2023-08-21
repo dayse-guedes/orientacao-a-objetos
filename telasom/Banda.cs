@@ -1,7 +1,13 @@
 ﻿class Banda
 {
     private List<Album> albums = new List<Album>();
-    public string Nome { get; set; }
+
+    public Banda(string nome) //Construtor responsável por setar o nome da banda 
+    {
+        Nome = nome;
+    }
+
+    public string Nome { get; } //No charp quando temos apenas get(leitura) precisa necessarimente de um construtor para cumprir o set ou passar outro valor já no parenteses após o get
 
     public void AdicionarAlbum(Album album) 
     { 
