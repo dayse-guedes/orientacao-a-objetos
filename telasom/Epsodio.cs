@@ -19,7 +19,7 @@
 
     public void AdicionarCovidados (string convidados) 
 {
-        convidados.Add(convidados);
+        //Descobrir o motivo do .Add dar errado nesse conrexro
 }
   
 
