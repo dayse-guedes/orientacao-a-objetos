@@ -2,7 +2,13 @@
 
 { 
     private List<Musica> musicas = new List<Musica>(); //criação de uma lista de musicas para setar na classe album, inicializando a lista vazia primeiro
-    public string Nome{ get; set; }
+
+    public Album(string nome) //Construtor responsável por setar o nome da album
+    {
+        Nome = nome;
+    }
+
+    public string Nome{ get; }
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
 
     public void AdicionarMusica(Musica musica)

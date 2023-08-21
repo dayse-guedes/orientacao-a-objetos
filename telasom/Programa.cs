@@ -1,23 +1,35 @@
-﻿Banda queen = new Banda();
-queen.Nome = "Queen";
-
-Album AlbumDoQueen = new Album();
-AlbumDoQueen.Nome = "The nigth of opera";
-
-Musica musica1 = new Musica(queen);
-musica1.Nome = "You Don't Know Me";
-musica1.Duracao = 250;
+﻿Banda queen = new Banda("Queen");
 
 
+Album AlbumDoQueen = new Album("The nigth of opera");
 
-Musica musica2 = new Musica(queen);
-musica2.Nome = "Nine Out of Ten";
-musica2.Duracao = 345;
+Musica musica1 = new Musica(queen,"You Don't Know Me")
+{
+     Duracao = 250,
+     Disponivel = true,
+};
+
+
+Musica musica2 = new Musica(queen, "Nine Out of Ten")
+{ //Inicializadores de propriedades
+    Duracao = 375,
+    Disponivel = false,
+
+
+};
 
 AlbumDoQueen.AdicionarMusica(musica1);
 AlbumDoQueen.AdicionarMusica(musica2);
+queen.AdicionarAlbum(AlbumDoQueen);
 
+
+
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
 AlbumDoQueen.ExibaMusicasDoAlbum();
+queen.ExibirDiscografia();
+
 
 
 
